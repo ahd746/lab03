@@ -26,7 +26,7 @@ exports.create = async (req, res, next) => {
       age,
       hireDate
     });
-    res.status(200).json({ message: 'This person was created successfully', status: 'success', person });
+    res.status(201).json({ message: 'This person was created successfully', status: 'success', person });
   } catch (error) {
     next(error);
   }
