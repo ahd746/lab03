@@ -21,10 +21,11 @@ mongoose.connect(process.env.DB_URI, {
   .catch(err => console.error(`Error: ${err}`));
 
 // Implement Body Parser
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+//const bodyParser = require('body-parser');
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.json());
 // register the routes
 const routes = require('./routes');
 const router = routes(express.Router());
